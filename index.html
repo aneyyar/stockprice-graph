@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Stock Price Graph</title>
+  </head>
+  <body>
+    <h1>Stock Price Graph</h1>
+    <form method="post">
+      <label for="symbol">Stock Symbol:</label>
+      <input type="text" id="symbol" name="symbol">
+      <br>
+      <label for="start_date">Start Date:</label>
+      <input type="date" id="start_date" name="start_date">
+      <br>
+      <label for="end_date">End Date:</label>
+      <input type="date" id="end_date" name="end_date">
+      <br>
+      <input type="submit" value="Submit">
+    </form>
+    {% if graph_url %}
+      <img src="data:image/png;base64,{{ graph_url }}" alt="Stock Price Graph">
+    {% endif %}
+  </body>
+</html>
+This template has a form that allows the user to enter a stock symbol, start date, and end date. When the form is submitted, Flask will handle the request and generate the graph, then it will pass the graph's url as a variable to the template. The template checks if the graph url is provided, if it is it will display it as an image tag on the page.
+
+You may want to customize this template to make it look nicer, for example, by adding styles and layout. Also, you may want to consider adding error messages in case of any error occurs during the process of retrieving data or generating the graph.
+
+
+

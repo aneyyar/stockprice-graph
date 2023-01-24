@@ -1,2 +1,2 @@
 # stockprice-graph
- graphs the price of a stock over a time interval
+ website where you can graph the price of a stock over a time interval
